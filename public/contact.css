@@ -1,0 +1,134 @@
+/* Coded by Romit */
+
+.card {
+  margin-top: 30px;
+}
+.agent-card {
+  margin: 20px 0px;
+}
+.card-div, .card-contact {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 200px;
+}
+.topDiv {
+  background: lightgrey;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  color: #eb5844;
+  font-size: 3.5rem;
+  padding: 19px;
+}
+.bottomDiv {
+  background: #fff;
+  background: lightgrey;
+  height: 350px;
+}
+.card-contact {
+  width: 100%;
+  height: 630px;
+  background: #fff;
+  border-bottom: 1px solid #e1e8ed;
+}
+.card-map, .card-address {
+  float: left;
+  padding: 10px 25px;
+  font-size: 16px;
+  color: #eb5844;
+}
+.card-bg {
+  background-color: lightgrey;
+  border-bottom: 1px solid #e1e8ed;
+  border-radius: 4px 4px 0 0;
+  height: 95px;
+  width: 100%;
+}
+.card-block {
+  display: block !important;
+}
+.card-button {
+  margin: -35px -10px 0;
+  text-align: right;
+  width: 100%;
+}
+.card-avatarLink {
+  background-color: #fff;
+  border-radius: 6px;
+  display: inline-block !important;
+  margin: -30px 5px 0 8px;
+  max-width: 100%;
+  padding: 1px;
+  vertical-align: bottom;
+}
+.card-avatarImg {
+  border: 1px solid #eb5844;
+  border-radius: 7px;
+  box-sizing: border-box;
+  color: #fff;
+  height: 72px;
+  width: 72px;
+  background-color: #fff;
+  border-radius: 6px;
+  float: left;
+  margin: -30px 5px 0 8px;
+  max-width: 100%;
+  padding: 1px;
+  vertical-align: bottom;
+}
+.card-divUser {
+  margin: -30px 0 20px 0;
+}
+.card-divName {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #eb5844;
+}
+.card-divName a {
+  color: inherit !important;
+}
+.card-divStats {
+  margin-left: 11px;
+  padding: 10px 0;
+}
+.card-Arrange {
+  box-sizing: border-box;
+  display: table;
+  margin: 0;
+  min-width: 100%;
+  padding: 0;
+  table-layout: auto;
+}
+ul.card-Arrange {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+ul.card-Arrange li {
+  display: table-cell;
+}
+.card-ArrangeSizeFit {
+  display: table-cell;
+  padding: 0;
+  vertical-align: top;
+}
+.card-ArrangeSizeFit a:hover {
+  text-decoration: none;
+}
+.card-StatValue {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  transition: color 0.15s ease-in-out 0s;
+}
+.card-StatLabel {
+  color: #eb5844;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  text-transform: uppercase;
+  transition: color 0.15s ease-in-out 0s;
+}

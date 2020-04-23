@@ -1,0 +1,197 @@
+<!-- Coded by Romit -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="contact.js"></script>
+    
+</head>
+
+<body>
+    <!-- Fixed Navigation Bar with site links -->
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light navbar-fixed-top">
+        <div class="navbar-header d-flex col">
+          <a class="navbar-brand" href="#">Travel<b>Experts</b></a>
+          <button type="button" data-target="#navbarCollapse" data-toggle="collapse"
+              class="navbar-toggle navbar-toggler ml-auto">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+          <ul class="nav navbar-nav">
+              <li class="nav-item"><a href="home" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="vPackagesForm" class="nav-link">Vacation Packages</a></li>
+              <li class="nav-item dropdown">
+                <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">Hotel</a></li>
+                    <li><a href="#" class="dropdown-item">Car Rentals</a></li>
+                    <li><a href="#" class="dropdown-item">Cruise</a></li>
+                    <li><a href="#" class="dropdown-item">Tours</a></li>
+                    <li><a href="#" class="dropdown-item">Yacht/Boat Charters</a></li>
+                    <li><a href="#" class="dropdown-item">Attractions</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a href="register" class="nav-link">Login/Register</a></li>
+              <li class="nav-item active"><a href="contact" class="nav-link">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right ml-auto">
+              <li class="nav-item"><a href="#" class="nav-link facebook"><i class="fa fa-facebook"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link twitter"><i class="fa fa-twitter"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link google"><i class="fa fa-google-plus"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link linkedin"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+
+        </div>
+    </nav>
+    <section class="agent-card-bg">
+        <div class="card container">
+            <div class="row">
+                <div class="col-xs-12 agent-card">
+                    <div class="card-contact">
+                        <div class="topDiv">Contact Us</div>
+                        <div class="card-map">
+                            <div class="card-body justify-content-center">
+                                <div class="iframe-rwd">
+                                    <iframe width="340" height="300" frameborder="0" scrolling="no"
+                                        src="https://maps.google.com/maps?q=sait&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                                    </iframe><br />
+                                    <small><a href="https://www.embedgooglemap.net/blog/nordvpn-coupon-code/"
+                                            style="color:#0000FF;text-align:left">View Larger Map</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-address">
+                            <div class="card-body">
+                                <p><b>Customer Care Contact: +1-780-555-0197</b></p>
+                                <p>Travel Experts<br>1301 16th Ave NW<br>Calgary, Alberta,<br>CANADA T2M 0L4</p>
+                                <p>Customer Care Email:
+                                <a href="mailto:travelexpertssupport@travelexperts.com?Subject=Hello%20again"
+                                    target="_top">travelexpertssupport@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="bottomDiv"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            
+        </script>
+        <div class="container">
+            <% agents.forEach(agent => { %>
+            <div class="row">
+                <div class="col-xs-12 agent-card">
+                    <div class="card-div">
+                        <a class="card-bg card-block"></a>
+                        <div>
+                            <img src="media/Faces/3.jpg" alt="agent" class="card-avatarImg img-thumbnail-agent">
+                            <div class="card-divUser">
+                                <div class="card-divName">
+                                    <%= agent.AgtFirstName %> <%= agent.AgtLastName %>
+                                </div>
+                            </div>
+                            <div class="card-divStats">
+                                <ul class="card-Arrange">
+                                    <li class="card-ArrangeSizeFit">
+                                        <span class="card-StatLabel card-block">Position</span>
+                                        <span class="card-StatValue"><%= agent.AgtPosition %></span>
+                                    </li>
+                                    <li class="card-ArrangeSizeFit">
+                                        <span class="card-StatLabel card-block">Business Number</span>
+                                        <span class="card-StatValue"><%= agent.AgtBusPhone %></span>
+                                    </li>
+                                    <li class="card-ArrangeSizeFit">
+                                        <span class="card-StatLabel card-block">Email</span>
+                                        <span class="card-StatValue"><a href="mailto:
+                                            <%= agent.AgtEmail %>?Subject=Hello%20again">
+                                            <%= agent.AgtEmail %></a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </section>
+    
+    <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">TravelExperts moto is <i>KISS (Keep It Simple Stupid)</i> 
+          </p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Services</h6>
+          <ul class="footer-links">
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Car Rentals</a></li>
+            <li><a href="#">Cruse</a></li>
+            <li><a href="#">Tours</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="Register">Register</a></li>
+            <li><a href="contact">Contact Us</a></li>
+            <li><a href="vPackagesForm">Sitemap</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by 
+        <a href="home">TravelExperts</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

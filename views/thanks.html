@@ -1,0 +1,45 @@
+<!-- Coded by Stephen -->
+
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <Title>
+      Thank You
+    </Title>
+    <link href="Stephen_style.css" rel="stylesheet" />
+    <link href="navbar.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        // Redirect users to back to home page after a few seconds - this function made by Chi
+        $(document).ready(function() {
+            setTimeout(() => {
+                window.location.replace("home");
+            }, 5000);
+        });
+    </script>
+  </head>
+         <!-- the following code made by Stephen -->
+
+  <body> 
+    <div class="thankyou">
+    <h1>Thank You For Your Purchase!</h1>
+        <h3>You will be redirected to the home page shortly.</h2>
+        <h3><a href="home">Or you can click here to go back to our home page</a></h3>
+      </div>
+
+          
+      
+      <!-- could not get the picture to respond to css, had to resort to what you see below this line to get the image to move -->
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp<img id="collage" src="./media/collage.png" alt="Thank You" id="collage" title="Thank You!">
+
+
+        <!-- Footer with Copyright message -->
+        <div id="footer">
+          Copyright &copy; 2019 Melchi
+        </div>
+
+     
+  </body>
+</html>

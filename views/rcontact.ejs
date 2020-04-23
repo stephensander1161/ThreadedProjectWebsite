@@ -1,0 +1,112 @@
+<!-- 
+    
+    Contact page was created by Romit Panicker using Bootstrap 4. Our project
+    was using BS3 which made this page incompatible with the framework. Due to 
+    time constraint, we were unable to convert our BS3 Contact Page to a BS4 version. 
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contact2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/bc15b12e35.js" crossorigin="anonymous"></script>
+    <script src="contact.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light register-navbar">
+        <a class="navbar-brand" href="index.html"><i class="fas fa-map-marked-alt col-sm-2 map-logo"></i></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="vPackagesForm">Packages</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="agent-card-bg">
+        <div class="card text-center card-outro justify-content-around container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card-body justify-content-around">
+                        <div class="iframe-rwd">
+                            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0"
+                                marginwidth="0"
+                                src="https://maps.google.com/maps?q=sait&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                            </iframe><br />
+                            <small><a href="https://www.embedgooglemap.net/blog/nordvpn-coupon-code/"
+                                    style="color:#0000FF;text-align:left">View Larger Map</a>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card-body">
+                        <h5>Customer Care Contact: +1-780-555-0197</h5>
+                        <p>1301 16th Ave NW<br>Calgary, Alberta,<br>CANADA T2M 0L4</p>
+                        <p>Customer Care Email:
+                            <a href="mailto:travelexpertssupport@travelexperts.com?Subject=Hello%20again"
+                                target="_top">travelexpertssupport@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var faces = ['5', '2', '3']
+
+        </script>
+        <div class="container d-flex justify-content-around agent-card-list">
+            <div class="row">
+                <div class="col-md">
+                    <ul class="list-group">
+                        <% agents.forEach(agent => { %>
+                        <li class="list-group-item">
+                            <div class="card bg-light mb-4" style="min-width: 40vw;">
+                                <div class="card-header"><%= agent.AgtPosition %></div>
+                                <div class="card-body">
+                                    <img src="media/Faces/3.jpg" alt="Profile-Image"
+                                        class="img-thumbnail img-thumbnail-agent">
+                                    <h5 class="card-title"><%= agent.AgtFirstName %> <%= agent.AgtLastName %></h5>
+                                    <p>Email: 
+                                        <a href="mailto:<%= agent.AgtEmail %>?Subject=Hello%20again"><%= agent.AgtEmail %></a>
+                                    </p>
+                                    <p>Business Phone: <%= agent.AgtBusPhone %></p>
+                                </div>
+                            </div>
+                        </li>
+                        <% }); %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

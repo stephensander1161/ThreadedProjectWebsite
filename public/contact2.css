@@ -1,0 +1,127 @@
+/* 
+
+   Coded by Romit for use on rcontact.ejs
+
+*/
+
+.img-thumbnail-agent {
+   border-radius: 50%;
+   height: 7rem;
+   width: 7rem;
+   margin: 1rem;
+}
+
+.agent-card-list {
+   margin-top: 2rem;
+}
+
+.agent-card-list {
+   padding: 4rem;
+}
+
+.agent-card-bg {
+   padding: 1rem;
+   position: relative;
+}
+
+.agent-card-bg::after {
+   content: "";
+   display: block;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+ url('media/vacation.jpg');
+   background-size: cover;
+   position: absolute;
+   background-attachment: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+
+#gmap_canvas {
+   height: 100%;
+   width: 100%;
+   resize: both;
+   overflow: auto;
+}
+
+.iframe-rwd  {
+   position: relative;
+   padding-bottom: 65.25%;
+   padding-top: 30px;
+   height: 0;
+   overflow: hidden;
+}
+
+.iframe-rwd iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.map-logo {
+   font-size: 4.5rem;
+   color: #a83232;
+}
+.map-logo:hover {
+   font-size: 4.5rem;
+   color: #c07171;
+}
+.map-logo:active {
+   font-size: 4.5rem;
+   color: #a83232;
+}
+
+.card-intro {
+   margin-bottom: 2rem;
+}
+.container-img-grid {
+   margin-bottom: 2rem;
+}
+.nav-item {
+   margin-left: 2rem;
+}
+.card-outro {
+   margin-top: 2rem;
+}
+.main-section-bg {
+   padding: 1rem;
+   position: relative;
+}
+.main-section-bg::after {
+   content: "";
+   display: block;
+   background: url(./background-suitcase.jpg) no-repeat  -10px;
+   background-size: cover;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: .5;
+   z-index: -1;
+}
+.array-img {
+   width: 50vw;
+}
+.img-table-td {
+   background-size: contain;
+   width: 50vw;
+}
+.section-img-array .img-table-row .desc-table-td {
+   vertical-align: middle !important; 
+   margin: auto;
+}
+
+.img-thumbnail-agent {
+   border-radius: 50% !important; 
+   height: 7rem;
+   width: 7rem;
+   margin: 1rem;
+}
+/*
+.agent-card-list {
+   margin-top: 2rem;
+} */

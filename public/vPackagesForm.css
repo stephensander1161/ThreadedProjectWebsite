@@ -1,0 +1,180 @@
+/* made by Stephen */
+
+.subtitle {
+  text-align: center;
+}
+.form-inline {
+  margin: 80px 0 30px 0;
+}
+.form-elegant .font-small {
+  font-size: 0.8rem; 
+}
+.form-elegant .z-depth-1a {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+  box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); 
+}
+.form-elegant .z-depth-1-half, .form-elegant .btn:hover {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); 
+}
+
+/*The rest made by Stephen - Autocomplete pulled from w3 schools */
+
+.button {
+  --button-color: black;
+  --button-background-color: silver;
+  box-shadow: 10px 10px 10px;
+}
+.autocomplete {
+  margin: 0 auto;
+  width: 72%;
+}
+input {
+  border: 1px solid ;
+  background-color: white;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=submit] {
+  background-color: #eb5844;
+  color: #fff;
+}
+.autocomplete-items {
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 5px;
+  cursor: pointer;
+  background-color:#fff;
+  border-bottom: 1px solid #d4d4d4;
+  color: black;
+}
+.autocomplete-items div:hover {
+  background-color:  #cccccc;
+}
+
+.autocomplete-active {
+  background-color: #eb5844 !important;
+  color: #ffffff;
+}
+.banner{
+  color: white;
+  background-image: url('media/positanobanner.jpg');
+  height: 100px;
+  vertical-align: middle;
+}
+.blue {
+  color:blue;
+  font-weight:bold;
+}
+.black {
+  color:black;
+  font-weight:bold
+}
+h1 {
+  text-align: center;
+  font-size: 265%;
+}
+h2 {
+  text-align: center;
+  font-size: 185%;
+}
+
+.orange {
+  text-shadow: 2px 1px #eb5844;
+  color: white;
+}
+
+.blue {
+  text-shadow: 1px 1px dodgerblue;
+  color: white;
+
+}
+.blackshadow{
+text-shadow: 2px 2px black;
+}
+
+.thankyou {
+text-align: center;
+font-size: 200%;
+margin-top: 0%;
+color: white;
+text-shadow: 2px 2px black;
+}
+
+#collage{
+top: 50%;
+right:  50%;
+left:  50%;
+bottom:  50%;
+padding-right: 10px;
+}
+
+#caribbeanCSS {
+  border-style: ridge;
+  background: white;
+  text-align: center;
+  background-image: url("media/caribbean.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: 1px 1px white;
+  }
+#polyCSS {
+  border-style: ridge;
+  background: white;
+  text-align: center;
+  background-image: url("media/poly.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: 1px 1px white;
+  }
+#asiaCSS {
+  border-style: ridge;
+  background: white;
+  text-align: center;
+  background-image: url("media/asia.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: 1px 1px white;
+  }
+#europeCSS {
+  border-style: ridge;
+  background: white;
+  text-align: center;
+  background-image: url("media/europe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: 1px 1px white;
+  }
+  
+#footer {
+  margin-top: 200px;
+  color: black;
+  position: relative;
+  top: 120%;
+  left: 45%;
+}
+.vPackages {
+  margin-bottom: 30px;
+}
+.blackshadow {
+  cursor: pointer;
+}

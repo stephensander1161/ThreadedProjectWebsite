@@ -1,0 +1,297 @@
+<!-- Coded by Stephen -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vacation Packages</title>
+	
+	<link rel="stylesheet" href="vPackagesForm.css" />
+	<link rel="stylesheet" href="footer.css">
+	<link rel="stylesheet" href="navbar.css">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="vPackagesForm.js"></script>
+</head>
+
+<body>
+	        <!--Nav Bar made by Chi -->
+
+	<nav class="navbar navbar-default navbar-expand-lg navbar-light navbar-fixed-top">
+			<div class="navbar-header d-flex col">
+				<a class="navbar-brand" href="#">Travel<b>Experts</b></a>
+				<button type="button" data-target="#navbarCollapse" data-toggle="collapse"
+					class="navbar-toggle navbar-toggler ml-auto">
+					<span class="navbar-toggler-icon"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- Collection of nav links, forms, and other content for toggling -->
+			<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+				<ul class="nav navbar-nav">
+					<li class="nav-item"><a href="home" class="nav-link">Home</a></li>
+					<li class="nav-item active"><a href="vPackagesForm" class="nav-link">Vacation Packages</a></li>
+					<li class="nav-item dropdown">
+					<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#" class="dropdown-item">Hotel</a></li>
+						<li><a href="#" class="dropdown-item">Car Rentals</a></li>
+						<li><a href="#" class="dropdown-item">Cruise</a></li>
+						<li><a href="#" class="dropdown-item">Tours</a></li>
+						<li><a href="#" class="dropdown-item">Yacht/Boat Charters</a></li>
+						<li><a href="#" class="dropdown-item">Attractions</a></li>
+					</ul>
+					</li>
+					<li class="nav-item"><a href="register" class="nav-link">Login/Register</a></li>
+					<li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right ml-auto">
+					<li class="nav-item"><a href="#" class="nav-link facebook"><i class="fa fa-facebook"></i></a></li>
+					<li class="nav-item"><a href="#" class="nav-link twitter"><i class="fa fa-twitter"></i></a></li>
+					<li class="nav-item"><a href="#" class="nav-link google"><i class="fa fa-google-plus"></i></a></li>
+					<li class="nav-item"><a href="#" class="nav-link linkedin"><i class="fa fa-linkedin"></i></a></li>
+				</ul>
+	
+			</div>
+		</nav>
+		        <!-- Rest of page made by Stephen. Chi helped with importing data from server for package fields -->
+
+				<form class="form form-inline justify-content-center" method="post" action="/vPackages_form" autocomplete="off">
+					<div class="autocomplete">
+						<label for="dateLeaving" class="orange">Date Leaving:</label>
+						<input type="date" id="dateLeaving" name="dateLeaving" class="form-control " required="true" />
+						
+						<label for="dateReturning" class="orange">Date Returning:</label>
+						<input type="date" id="dateReturning" name="dateReturning" class="form-control " required="true" />
+						<input type="text" id="leavingFrom" name="leavingFrom" class="form-control " required="true"
+							placeholder="Leaving From" />
+						<select id="vacaPackage" name="vacaPackage" class="form-control " required="true"
+							placeholder="Choose Your Package" />
+						<option value="caribbean">Caribbean New Year</option>
+						<option value="polynesia">Polynesian Paradise</option>
+						<option value="asia">Asian Expedition</option>
+						<option value="europe">European Vacation</option>
+						</select>
+						<input  type="submit" class="btn btn-danger"
+						value="Add Package"></input>
+					</div>
+				</form>
+
+	<div class="container vPackages">
+		<div class="row">
+			<div class="ml-1" class="mt-0" class="px-2" class="p-3" class="col-sm-6" id="caribbeanCSS">
+				<h1 class="blackshadow" onclick="window.location.replace('/register')"><%= packages[0].PkgName %></h1>
+				<h4 class="blue"> <%= packages[0].PkgDesc%></h4>
+				<p class="orange">Start Date: <%= packages[0].PkgStartDate.toDateString() %></p>
+				<p class="orange">End Date: <%= packages[0].PkgEndDate.toDateString() %></p><br />
+				<button class="btn btn-danger" onclick="caribbeanVideo()">See Video</button><br />
+				<h3 class="orange">Package Base Price:</h3>
+				<h2 class="orange">$<%= packages[0].PkgBasePrice%></h2>
+			</div>
+			<br />
+			<div class="ml-1" class="mt-0" class="px-2" class="p-3" class="col-sm-6" id="polyCSS">
+				<h2 class="blackshadow" onclick="window.location.replace('/register')"><%= packages[1].PkgName %></h2>
+				<h4 class="blue"><%= packages[1].PkgDesc%></h4>
+				<p class="orange">Start Date: <%= packages[1].PkgStartDate.toDateString() %></p>
+				<p class="orange">End Date: <%= packages[1].PkgEndDate.toDateString() %></p><br />
+				<button class="btn btn-danger" onclick="polyVideo()">See Video</button><br />
+				<h3 class="orange">Package Base Price: </h3>
+				<h2 class="orange">$<%= packages[1].PkgBasePrice%></h2>
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="ml-1" class="mt-0" class="px-2" class="p-3" class="col-sm-6" id="asiaCSS">
+				<h2 class="blackshadow" onclick="window.location.replace('/register')"><%= packages[2].PkgName %></h2>
+				<h4 class="blue"><%= packages[2].PkgDesc%></h4>
+				<p class="orange">Start Date: <%= packages[2].PkgStartDate.toDateString() %></p>
+				<p class="orange">End Date: <%= packages[2].PkgEndDate.toDateString() %></p><br />
+				<button class="btn btn-danger" onclick="asiaVideo()">See Video</button><br />
+				<h3 class="orange"> Package Base Price: </h3>
+				<h2 class="orange">$<%= packages[2].PkgBasePrice%></h2>
+			</div>
+			<br />
+
+			<div class="ml-1" class="mt-0" class="px-2" class="p-3" class="col-sm-6" id="europeCSS">
+
+				<h2 class="blackshadow" onclick="window.location.replace('/register')"><%= packages[3].PkgName %></h2>
+				<h4 class="blue"><%= packages[3].PkgDesc%></h4>
+				<p class="orange">Start Date: <%= packages[3].PkgStartDate.toDateString() %></p>
+				<p class="orange">End Date: <%= packages[3].PkgEndDate.toDateString() %></p><br />
+				<button class="btn btn-danger" onclick="europeVideo()">See Video</button><br />
+				<h3 class="orange">Package Base Price: </h3>
+				<h2 class="orange">$<%= packages[3].PkgBasePrice%></h2>
+			</div>
+		</div>
+	</div>
+
+	<footer class="site-footer">
+		<div class="container">
+		  <div class="row">
+			 <div class="col-sm-12 col-md-6">
+				<h6>About</h6>
+				<p class="text-justify">TravelExperts moto is <i>KISS (Keep It Simple Stupid)</i> 
+				</p>
+			 </div>
+	
+			 <div class="col-xs-6 col-md-3">
+				<h6>Services</h6>
+				<ul class="footer-links">
+				  <li><a href="#">Hotels</a></li>
+				  <li><a href="#">Car Rentals</a></li>
+				  <li><a href="#">Cruse</a></li>
+				  <li><a href="#">Tours</a></li>
+				</ul>
+			 </div>
+	
+			 <div class="col-xs-6 col-md-3">
+				<h6>Quick Links</h6>
+				<ul class="footer-links">
+				  <li><a href="Register">Register</a></li>
+				  <li><a href="contact">Contact Us</a></li>
+				  <li><a href="vPackagesForm">Sitemap</a></li>
+				  <li><a href="#">Privacy Policy</a></li>
+				  
+				</ul>
+			 </div>
+		  </div>
+		  <hr>
+		</div>
+		<div class="container">
+		  <div class="row">
+			 <div class="col-md-8 col-sm-6 col-xs-12">
+				<p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by 
+			 <a href="home">TravelExperts</a>.
+				</p>
+			 </div>
+	
+			 <div class="col-md-4 col-sm-6 col-xs-12">
+				<ul class="social-icons">
+				  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+				  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+				  <li><a class="dribbble" href="#"><i class="fa fa-google-plus"></i></a></li>
+				  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+				</ul>
+			 </div>
+		  </div>
+		</div>
+	 </footer>
+	<script>
+		//the following is taken from W3 Schools for auto complete of the 'leaving from' field 
+		function autocomplete(inp, arr) {
+		  /*the autocomplete function takes two arguments,
+		  the text field element and an array of possible autocompleted values:*/
+		  var currentFocus;
+		  /*execute a function when someone writes in the text field:*/
+		  inp.addEventListener("input", function(e) {
+				var a, b, i, val = this.value;
+				/*close any already open lists of autocompleted values*/
+				closeAllLists();
+				if (!val) { return false;}
+				currentFocus = -1;
+				/*create a DIV element that will contain the items (values):*/
+				a = document.createElement("DIV");
+				a.setAttribute("id", this.id + "autocomplete-list");
+				a.setAttribute("class", "autocomplete-items");
+				/*append the DIV element as a child of the autocomplete container:*/
+				this.parentNode.appendChild(a);
+				/*for each item in the array...*/
+				for (i = 0; i < arr.length; i++) {
+				  /*check if the item starts with the same letters as the text field value:*/
+				  if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+					 /*create a DIV element for each matching element:*/
+					 b = document.createElement("DIV");
+					 /*make the matching letters bold:*/
+					 b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+					 b.innerHTML += arr[i].substr(val.length);
+					 /*insert a input field that will hold the current array item's value:*/
+					 b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+					 /*execute a function when someone clicks on the item value (DIV element):*/
+					 b.addEventListener("click", function(e) {
+						  /*insert the value for the autocomplete text field:*/
+						  inp.value = this.getElementsByTagName("input")[0].value;
+						  /*close the list of autocompleted values,
+						  (or any other open lists of autocompleted values:*/
+						  closeAllLists();
+					 });
+					 a.appendChild(b);
+				  }
+				}
+		  });
+		  /*execute a function presses a key on the keyboard:*/
+		  inp.addEventListener("keydown", function(e) {
+				var x = document.getElementById(this.id + "autocomplete-list");
+				if (x) x = x.getElementsByTagName("div");
+				if (e.keyCode == 40) {
+				  /*If the arrow DOWN key is pressed,
+				  increase the currentFocus variable:*/
+				  currentFocus++;
+				  /*and and make the current item more visible:*/
+				  addActive(x);
+				} else if (e.keyCode == 38) { //up
+				  /*If the arrow UP key is pressed,
+				  decrease the currentFocus variable:*/
+				  currentFocus--;
+				  /*and and make the current item more visible:*/
+				  addActive(x);
+				} else if (e.keyCode == 13) {
+				  /*If the ENTER key is pressed, prevent the form from being submitted,*/
+				  e.preventDefault();
+				  if (currentFocus > -1) {
+					 /*and simulate a click on the "active" item:*/
+					 if (x) x[currentFocus].click();
+				  }
+				}
+		  });
+		  function addActive(x) {
+			 /*a function to classify an item as "active":*/
+			 if (!x) return false;
+			 /*start by removing the "active" class on all items:*/
+			 removeActive(x);
+			 if (currentFocus >= x.length) currentFocus = 0;
+			 if (currentFocus < 0) currentFocus = (x.length - 1);
+			 /*add class "autocomplete-active":*/
+			 x[currentFocus].classList.add("autocomplete-active");
+		  }
+		  function removeActive(x) {
+			 /*a function to remove the "active" class from all autocomplete items:*/
+			 for (var i = 0; i < x.length; i++) {
+				x[i].classList.remove("autocomplete-active");
+			 }
+		  }
+		  function closeAllLists(elmnt) {
+			 /*close all autocomplete lists in the document,
+			 except the one passed as an argument:*/
+			 var x = document.getElementsByClassName("autocomplete-items");
+			 for (var i = 0; i < x.length; i++) {
+				if (elmnt != x[i] && elmnt != inp) {
+				  x[i].parentNode.removeChild(x[i]);
+				}
+			 }
+		  }
+		  /*execute a function when someone clicks in the document:*/
+		  document.addEventListener("click", function (e) {
+				closeAllLists(e.target);
+		  });
+		}
+		
+		/*An array containing all the country names in the world:*/
+		var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+		
+		/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+		autocomplete(document.getElementById("leavingFrom"), countries);
+		</script>
+</body>
+
+</html>
